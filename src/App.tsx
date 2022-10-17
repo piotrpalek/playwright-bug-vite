@@ -1,10 +1,13 @@
-import './App.css'
+import { ReactElement } from 'react';
+import { Grid } from 'housecall-ui';
 import { noop } from 'lodash';
+import './App.css'
 
-function App() {
+function App(props: { children: ReactElement }) {
+  const { children } = props;
   noop();
   return (
-    <h1>Hi!</h1>
+    <Grid>{children}</Grid>
   )
 }
 
